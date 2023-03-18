@@ -1,0 +1,315 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color [Refering to the red Charcoal box] *in progress*
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states) 
+
+            - @font-face or @import (to import typefaces) 
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* General setup */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body{
+    margin: 0;
+    height:100%;
+    width:100%;
+    padding-left: 15rem;
+    min-width: 1200px;
+    max-width: fit-content;
+}
+
+
+header{
+   
+    margin-bottom:.5rem;
+    padding-bottom:.5rem;
+}
+
+
+/* Layout */
+
+
+Main{
+    overflow:visible;
+    min-width: 800px;
+    max-width: 1200px;
+    background-repeat: no-repeat;
+    float: none;
+}
+
+
+.main-section article{
+    display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+}
+
+
+.article-image{
+    margin-right: 20px;
+}
+
+.article-content{
+    float:right;
+    margin-left: 20px;
+}
+
+.subsection{
+    width: 100%;
+    align-items: left;
+    
+}
+
+
+figure {
+    width: 100%;
+    margin:10% ;
+    
+    
+}
+
+figure img {
+    width: 100%;
+    max-width:25rem;
+    
+    
+}
+
+figcaption {
+    margin: 0.1225rem;
+}
+
+footer {
+    clear: both;
+    margin-top:1.5rem;
+    text-align: end;
+    
+}
+
+section, aside, nav, footer {
+  padding: .5rem;
+  width: 100%;
+}
+
+.box2 p{
+    font-size: 16px;
+    line-height: 2rem;
+}
+
+aside{
+    align-content: center;
+    line-height: 20px;
+    float: right;
+}
+
+.article-content:nth-child(1){
+    text-align: left;
+}
+
+.article-content:nth-child(2){
+    text-align: inline-start;
+}
+
+ 
+/* header and footer */
+header, footer{
+    border: 1rem;
+}
+  
+
+
+
+/* Imported Typfaces */
+@font-face{
+    font-family: 'opensans-regular';
+    src: url(..//fonts/sans-serif/opensans-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: 'lato-regular';
+    src: url(..//fonts/sans-serif/lato-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Typography Styles */
+html{
+    font-family:'opensans-regular', sans-serif;
+}
+
+h1{
+    font-family:'lato-regular', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.125rem;
+    text-align: center;
+    padding-top: .5rem;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+
+.highlight{
+    font-family: "ultra-regular", serif;
+    background-color: darkred;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 6%;
+    text-transform: uppercase;
+    color: beige; 
+    box-shadow: #000;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.rotate{
+    transform: rotate(-5deg);
+}
+
+h2{
+    font-family: 'lato-regular';
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    
+}
+
+h3{
+    font-family: 'lato-regular';
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    
+}
+
+h3, p{
+    margin: 0;
+    text-align: left;
+}
+
+
+/* Link Styling */
+a{
+    align-items: center;
+ }
+ 
+
+
+ a:link,
+ a:visited{
+     color: rgb(0, 0, 0);
+ }
+ 
+ a:focus,
+ a:hover{
+     text-decoration-style: none;
+ }
+ 
+ 
+
+/* Navigation Menu */
+nav{
+    display:flex;
+    padding-left: 20px;
+}
+
+
+nav a{
+    line-height: .5rem;
+    display:inline-block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    word-spacing: 2rem;
+    text-decoration: none;
+    padding: 2rem;
+    align-content: center;
+    
+    
+}
+
+nav a:nth-child(2){
+    text-decoration-line: line-through;
+    transform: rotate(5deg);
+    
+
+}
+
+nav a:focus,
+nav a:hover{
+    color: #FFF;
+    background-color: #ffdafb;
+    border-radius: 5%;
+}
+
+nav a:active{
+    color:#FFF;
+    
+}
+
+.Subscribe-button{
+    background-color: blue;
+    font-family: "ultra-regular", serif;
+    font-weight: bolder;
+    padding: 16px;
+    border-radius: 6%;
+    text-transform: uppercase;
+    color: beige; 
+   
+    
+}
+
+/* Footer Styles */
+footer, a{
+    align-content: right;
+    text-align: right;
+    text-decoration: none;
+    
+ }
+
